@@ -8,7 +8,7 @@ app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
-  res.send("This is Jhang's Nail demo")
+  res.render('home')
 })
 
 app.get('/:type', (req, res) => {
