@@ -9,7 +9,24 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body style="background-color: #f9f4e6;">
-  {{{body}}}
+  <main role="main">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        {{#if success_messages}}
+        <div class="alert alert-success" role="alert" style="margin: 30px 0 ;">
+          {{success_messages}}
+        </div>
+        {{/if}}
+        {{#if error_messages}}
+        <div class="alert alert-danger" role="alert" style="margin: 30px 0 ;">
+          {{error_messages}}
+        </div>
+        {{/if}}
+  
+        {{{body}}}
+      </div>
+    </div>
+  </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
   integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
